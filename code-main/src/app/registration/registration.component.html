@@ -1,0 +1,30 @@
+<div class="wrapper">
+    <div class="logo">
+        <img src="/assets/vegetables.jpg" alt="">
+    </div>
+    <div class="text-center mt-4 name">
+      <h5 > Online Vegetable Store </h5>
+      <h5>Enter Registration details</h5>
+    </div>
+    
+    <form class="p-3 mt-3">
+        <div class="form-field d-flex align-items-center">
+            <span class="far fa-user"></span>
+            <input type="text" name="userName" id="userName" [(ngModel)]="data1.username" required placeholder="Username">
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span class="fas fa-key"></span>
+            <input type="password" name="password" id="pwd" [(ngModel)]="data1.password" required  placeholder="Password">
+        </div>
+        <div>
+            <input type="any" name="mobileNumber" id="mobileNumber" [(ngModel)]="data1.mobileNumber" required placeholder="mobileNumber">
+        </div>
+        <div>
+            <input type="any" name="role" id="role" [(ngModel)]="data1.role" required placeholder="role">
+        </div>
+        <button class="btn mt-3" (click)="formSubmit1()">Register</button>
+       
+    </form>
+    
+
+</div>

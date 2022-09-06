@@ -1,0 +1,28 @@
+<table class = "table table-striped">
+    <thead style=font-size:larger;font-weight:400;color:firebrick;>
+        <tr>
+  
+            <th> Vegetable Id</th>
+            <th> Vegetable Name </th>
+            <th> Vegetable Amount </th>
+            
+            <th> Type</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody style="font-style: oblique; font-size: larger; font-family:Verdana, Geneva, Tahoma, sans-serif;">
+        <tr *ngFor = "let vegetable of vegetables" >
+           
+            <td> {{ vegetable.vegtableId }} </td>
+            <td> {{ vegetable.vegetableName }} </td>
+            <td> {{ vegetable.vegetableAmount }} </td>
+            <td> {{ vegetable.vegetableType }} </td>
+            <td>
+                <button (click) = "updateVegetable(vegetable.vegetableId)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteVegetable(vegetable.vegetableId)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "vegetableDetails(vegetable.vegetableId)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+             
+            </td>
+        </tr>
+    </tbody>
+</table><br><br><br><br><br><br><br>
